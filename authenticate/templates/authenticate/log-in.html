@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <h1>Log In</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="log-form">
+        <form action="{% url 'log-in' %}" method="POST">
+            {% csrf_token %}
+            <h3 class="log-mail">
+                Username:
+                <input type="text" class="input_bar" placeholder="" name="username">
+            </h3>
+            <h3 class="log-password">
+                Password:
+                <input type="password" class="input_bar" name="password">
+            </h3>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+{% endblock content %}

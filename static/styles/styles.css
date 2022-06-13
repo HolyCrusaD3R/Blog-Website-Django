@@ -1,0 +1,17 @@
+p {
+    background-color: aquamarine;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

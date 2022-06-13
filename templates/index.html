@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <header class="navbar">
+        <h1>
+            <a href="{% url 'home' %}">Home</a>
+        </h1>
+        {% block navbar %}
+        {% endblock navbar %}
+    </header>
+    <hr>
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <small class="message">{{ message }}</small>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
