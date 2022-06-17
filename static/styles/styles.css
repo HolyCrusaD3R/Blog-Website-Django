@@ -6,12 +6,27 @@ p {
     cursor: pointer;
 }
 
-h1 {
+.nav h1 {
     margin: 1rem;
+    font-size: 3rem;
 }
 
-.navbar {
+.container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin: 1rem;
+}
+
+.flex a {
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin: 1rem;
+}
+
+.messages {
+    margin: 2rem;
 }
