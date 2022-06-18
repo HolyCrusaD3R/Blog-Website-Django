@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'authenticate.apps.AuthenticateConfig',
     'core.apps.CoreConfig',
+    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [

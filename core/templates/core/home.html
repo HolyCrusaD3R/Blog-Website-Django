@@ -7,7 +7,8 @@
         {% else %}
             <a href="{% url 'log-in' %}" class="log-link-btn link">Log In</a>
         {% endif %}
-        <a href="{% url 'register' %}" class="registe-btn link">Register</a>
+        <a href="{% url 'register' %}" class="register-btn link">Register</a>
+        <a href="{% url 'posts' 1 %}" class="link">Posts</a>
     </div>
     <hr>
 {% endblock content %}

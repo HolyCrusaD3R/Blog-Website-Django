@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="post">
+        <smaller class="username">{{ post.user.username }}</smaller>
+        <h3>{{ post.headline }}</h3>
+        <p>{{ post.body }}</p>
+    </div>
+    <hr>
+    <div class="content">
+        {% for comment in comments %}
+            <div class="messages">
+                <smaller class="username">{{ comment.user.username }}</smaller>
+                <p>{{ comment.message }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
