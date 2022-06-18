@@ -8,12 +8,22 @@
     </div>
     <hr>
     <div class="content">
+        {% if user.is_authenticated  %}
+            <!--comment form-->
+            <form action="{% url 'post' post.id %}" method="POST" class="form-group">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" name="Submit" value="Comment" class="btn btn-success">
+            </form>
+        {% endif %}
+        <!--comments-->
         {% for comment in comments %}
             <div class="messages">
                 <smaller class="username">{{ comment.user.username }}</smaller>
                 <p>{{ comment.message }}</p>
             </div>
         {% endfor %}
+
     </div>
 
 {% endblock content %}

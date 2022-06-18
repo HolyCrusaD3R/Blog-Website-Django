@@ -84,3 +84,18 @@ p {
     border-radius: 15px;
     padding: 2px;
 }
+
+label[for=id_message]
+{
+    color: var(--lighter);
+}
+
+label[for=username]
+{
+    color: var(--lighter);
+}
+
+label[for=password]
+{
+    color: var(--lighter);
+}
