@@ -1,5 +1,13 @@
 {% extends 'index.html' %}
 
+{% block title %}
+    Post
+{% endblock title%}
+
+{% block navbar %}
+    <h1>Post</h1>
+{% endblock navbar %}
+
 {% block content %}
     <div class="post">
         <smaller class="username">{{ post.user.username }}</smaller>
@@ -13,7 +21,7 @@
             <form action="{% url 'post' post.id %}" method="POST" class="form-group">
                 {% csrf_token %}
                 {{ form }}
-                <input type="submit" name="Submit" value="Comment" class="btn btn-success">
+                <input type="submit" name="Submit" value="Comment" class="btn btn-primary">
             </form>
         {% endif %}
         <!--comments-->

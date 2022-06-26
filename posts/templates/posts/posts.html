@@ -1,5 +1,13 @@
 {% extends 'index.html' %}
 
+{% block title %}
+    Posts
+{% endblock title%}
+
+{% block navbar %}
+    <h1>Posts</h1>
+{% endblock navbar %}
+
 {% block content %}
     {% for post in posts %}
         <a href="{% url 'post' post.id %}"><h3 class="post">{{ post.headline }}</h3></a>

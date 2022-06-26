@@ -16,9 +16,6 @@ def logIn(request):
             messages.success(request, "There Was An Error. Try Again...")
             return redirect('log-in')
     else:
-        context = {
-            "title": "Log In"
-        }
         return render(request, 'authenticate/log-in.html', context)
 
 
@@ -44,7 +41,6 @@ def register(request):
     else:
         form = UserCreationForm()
     context = {
-        "title": "Register",
         "form": form
     }
     return render(request, "authenticate/register.html", context)
