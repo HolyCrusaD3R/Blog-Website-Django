@@ -3,17 +3,19 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-    Register
-{% endblock title %}
+    Blog
+{% endblock %}
 
 {% block navbar %}
-    <h1>Register</h1>
+    <h1>Create A Blog</h1>
 {% endblock navbar %}
 
 {% block content %}
-    <form method="POST" class="form-group">
-        {% csrf_token %}
-        {{ form|crispy }}
+    <div class="form-group">
+        <form action="{% url 'blog' %}" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
         <button type="submit" class="btn btn-success">Register</button>
-    </form>
+        </form>
+    </div>
 {% endblock content %}

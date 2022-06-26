@@ -9,6 +9,10 @@
     --sun: #ebb734;
 }
 
+h1 {
+    color: var(--lighter);
+}
+
 hr {
     height: 1px;
     background-color: var(--grey);
@@ -90,12 +94,37 @@ label[for=id_message]
     color: var(--lighter);
 }
 
+label[for=id_username]
+{
+    color: var(--lighter);
+}
+
+label[for=id_password1]
+{
+    color: var(--lighter);
+}
+
+label[for=id_password2]
+{
+    color: var(--lighter);
+}
+
 label[for=username]
 {
     color: var(--lighter);
 }
 
 label[for=password]
+{
+    color: var(--lighter);
+}
+
+label[for=id_headline]
+{
+    color: var(--lighter);
+}
+
+label[for=id_body]
 {
     color: var(--lighter);
 }

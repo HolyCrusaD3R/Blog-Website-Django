@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 
 def posts(request, page):
@@ -36,3 +36,17 @@ def post(request, pk):
         "form": form
     }
     return render(request, 'posts/post.html', context)
+
+
+def blog(request):
+    form = PostForm()
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        form.instance.user = request.user
+        if form.is_valid():
+            curr = form.customSave(form.instance.user)
+            return redirect('post', pk=curr.id)
+    context = {
+        "form": form
+    }
+    return render(request, 'posts/blog.html', context)
