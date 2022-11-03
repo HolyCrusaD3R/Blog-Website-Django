@@ -16,7 +16,7 @@ def logIn(request):
             messages.success(request, "There Was An Error. Try Again...")
             return redirect('log-in')
     else:
-        return render(request, 'authenticate/log-in.html', context)
+        return render(request, 'authenticate/log-in.html')
 
 
 def logOut(request):
